@@ -1,10 +1,10 @@
 # Progetto Rubamazzo | Analisi tecnica
 
-## 1. Obiettivo
+## Obiettivo
 Rubamazzo è un gioco di carte italiano a due giocatori e l’obiettivo è quello di acquisire il maggior numero di carte dal tavolo, o prendendo una carta dal tavolo uguale a una nella propria mano, oppure rubando il mazzo all’avversario nel caso che la carta in cima al suo mazzetto dei punti e una carta nella propria mano, siano uguali.
 Il giocatore che alla fine del gioco ha più carte nel proprio mazzetto vince.
 
-### 1.1 Regole 
+### Regole 
 Giocatori: 2
 Scopo: Lo scopo del gioco e' raccogliere più carte possibili nel proprio mazzetto, rubando anche dal mazzetto avversario oltre che prendendo le carte in campo.
 Svolgimento del gioco:
@@ -15,13 +15,13 @@ Un giocatore può altrimenti, “rubare” il mazzetto all’avversario, e nel c
 Se non è possibile nessuna delle due operazioni, allora la carta viene collocata nel mazzo centrale insieme alle altre.
 Termine del gioco: Quando i giocatori rimangono senza carte in mano, e non si ha più la disponibilità di pescare altre carte dal mazzo, siccome è vuoto, si contano le carte del proprio mazzetto e chi ne ha un maggior numero vince.
 
-## 2. Analisi architetturale
+## Analisi architetturale
 Nell’ambito del sottosistema Rubamazzo, sono state realizzate le classi:
 Carta
 MazzoDiCarte
 Napoletano
 
-### 2.1. Carta
+### Carta
 In questo paragrafo sono presenti i metodi e gli attributi necessari all’implementazione di tale classe.
 
 Attributi privati: 
@@ -41,7 +41,7 @@ Metodi pubblici:
 - friend ostream& operator<<(ostream& out, const Carta& c): metodo amico della classe che stampa una carta in output tramite l’overloading dell’operatore <<;
 - bool operator==(Carta c): operatore che confronta due carte e verifica la loro uguaglianza tramite l’overloading dell’operatore binario ==.
 
-### 2.2. MazzoDiCarte
+### MazzoDiCarte
 In questo paragrafo sono presenti i metodi e gli attributi necessari all’implementazione di tale classe.
 Questa è una classe astratta dato che contiene un metodo virtuale puro.
 Gli attributi sono protetti per facilitare l’uso degli attributi nella sua classe figlia Napoletano.
@@ -55,7 +55,7 @@ Metodi pubblici:
 - virtual ~MazzoDiCarte(): distruttore;
 - virtual void inizializza() = 0: metodo puro che inizializza il mazzo di 40 carte (non viene implementato in questa classe, ma nella sua classe figlia Napoletano).
 
-### 2.3. Napoletano
+### Napoletano
 In questo paragrafo sono presenti i metodi e gli attributi necessari all’implementazione di tale classe.
 
 Metodi pubblici: 
